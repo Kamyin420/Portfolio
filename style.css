@@ -366,6 +366,6 @@ footer {
 
 footer img {
     max-width: 50%;
-    position: relative;
-    top: 1rem;
+    position:static;
+    top: .3rem;
 }

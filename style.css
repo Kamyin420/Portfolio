@@ -96,7 +96,7 @@ header nav h2::before { width: 4.7em; }
 
 .gedicht {
     font-size: .5rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
     margin-top: -3rem;
     max-height: 8rem;
 }
@@ -115,8 +115,8 @@ header nav h2::before { width: 4.7em; }
 .floater {
     position: relative;
     width: 100%;
-    height: 180vh;
-    margin-top: 4rem;
+    height: 36rem;
+    margin-top: 6rem;
 }
 
 /* algemene floating style */
@@ -124,14 +124,69 @@ header nav h2::before { width: 4.7em; }
     position: absolute;
     height: auto;
     pointer-events: none;
-    animation: float 6s ease-in-out infinite;
 }
 
-@keyframes float {
-    0%   { transform: translateY(0px); }
-    50%  { transform: translateY(-18px); }
-    100% { transform: translateY(0px); }
+.klaus { animation: float-klaus 60s linear infinite; }
+.typo  { animation: float-typo  60s linear infinite; }
+.fungi { animation: float-fungi 60s linear infinite; }
+
+
+/*animatie*/
+/*@keyframes float {
+    0%   { transform: translate(0rem, 0rem) rotate(0deg); }
+
+    12%  { transform: translate(-0.8rem, -1.2rem) rotate(-0.5deg); }
+
+    25%  { transform: translate(-1.6rem, -1.4rem) rotate(-1deg); }
+
+    37%  { transform: translate(-2.0rem, -0.6rem) rotate(0deg); }
+
+    50%  { transform: translate(-2.2rem, 0.4rem) rotate(1deg); }
+
+    62%  { transform: translate(-1.4rem, 1.2rem) rotate(0.3deg); }
+
+    75%  { transform: translate(-0.6rem, 1.5rem) rotate(-0.3deg); }
+
+    87%  { transform: translate(-0.2rem, 0.4rem) rotate(0deg); }
+
+    100% { transform: translate(0rem, 0rem) rotate(0deg); }
+}*/
+
+@keyframes float-klaus {
+    0%   { transform: translate(0rem, 0rem) rotate(0deg); }
+    12%  { transform: translate(-1.2rem, -0.6rem) rotate(-0deg); }
+    25%  { transform: translate(-2.4rem, -1.8rem) rotate(0deg); }
+    37%  { transform: translate(-3rem, -0.6rem) rotate(0deg); }
+    50%  { transform: translate(-2.2rem, 1rem) rotate(0deg); }
+    62%  { transform: translate(-1.4rem, 1.4rem) rotate(0deg); }
+    75%  { transform: translate(-0.8rem, 0.8rem) rotate(0deg); }
+    87%  { transform: translate(-0.3rem, -0.2rem) rotate(0deg); }
+    100% { transform: translate(0rem, 0rem) rotate(0deg); }
 }
+
+@keyframes float-typo {
+    0%   { transform: translate(0rem, 0rem) rotate(0deg); }
+    18%  { transform: translate(-0.4rem, 1.4rem) rotate(0deg); }
+    32%  { transform: translate(-1rem, 3.4rem) rotate(0deg); }
+    48%  { transform: translate(-2.6rem, 1.2rem) rotate(deg); }
+    62%  { transform: translate(-1rem, -1rem) rotate(0deg); }
+    78%  { transform: translate(-0.6rem, -2.8rem) rotate(0deg); }
+    90%  { transform: translate(-0.4rem, -1.8rem) rotate(0deg); }
+    100% { transform: translate(0rem, 0rem) rotate(0deg); }
+}
+
+
+@keyframes float-fungi {
+    0%   { transform: translate(0rem, 0rem) rotate(0deg); }
+    15%  { transform: translate(0.8rem, -2rem) rotate(0deg); }
+    30%  { transform: translate(1.8rem, -4rem) rotate(0deg); }
+    45%  { transform: translate(4.6rem, -2rem) rotate(0deg); }
+    60%  { transform: translate(-2.2rem, 2rem) rotate(-0deg); }
+    75%  { transform: translate(-1.2rem, 1rem) rotate(-0deg); }
+    90%  { transform: translate(-0.4rem, 0.2rem) rotate(0deg); }
+    100% { transform: translate(0rem, 0rem) rotate(0deg); }
+}
+
 
 /* MOBILE POSITIES */
 .klaus {
@@ -186,7 +241,7 @@ header nav h2::before { width: 4.7em; }
 
     .gedicht {
         font-size: .63rem;
-        margin-left: 30px;
+        margin-left: 2.5rem;
         margin-top: -4.5rem;
     }
 
@@ -195,11 +250,15 @@ header nav h2::before { width: 4.7em; }
         top: -14rem;
     }
 
-    .floater {
-        height: 200vh;
-    }
 
     /* scale ×1.5 */
+
+    .floater {
+    width: 100%;
+    height: 50rem;
+    margin-top: 6rem;
+    }
+
    .klaus {
         width: 30%;
         left: 25%;
@@ -215,7 +274,7 @@ header nav h2::before { width: 4.7em; }
     .fungi {
         width: 32%;
         left: 8%;
-        top: 32%;
+        top: 50%;
     }
 
     .hand {
@@ -227,14 +286,14 @@ header nav h2::before { width: 4.7em; }
     }
 
 /* -------------------------------------- */
-/* DESKTOP – EXACTE FIGMA POSITIES */
+/* DESKTOP – 2x */
 /* -------------------------------------- */
 
 @media screen and (min-width: 1024px) {
 
     .floater {
-        height: 2271px;
-        width: 1512px;
+        height: 100rem;
+        width: 100%;
         position: relative;
         margin: 0 auto;
     }
@@ -242,20 +301,20 @@ header nav h2::before { width: 4.7em; }
     /* pixel-perfect percentages (berekend uit Figma) */
     .klaus {
         width: 30%;
-        left: 25%;
-        top: 5%;
+        left: 35%;
+        top: 2%;
     }
 
     .typo {
-        width: 50%;
-        left: 55%;
-        top: 15%;
+        width: 45%;
+        left: 50%;
+        top: 28%;
     }
 
     .fungi {
-        width: 32%;
+        width: 28%;
         left: 8%;
-        top: 32%;
+        top: 42%;
     }
 
     .hand {
@@ -300,6 +359,13 @@ header nav h2::before { width: 4.7em; }
 /* FOOTER */
 /* -------------------------------------- */
 
+footer {
+    height: 9rem;
+}
+
+
 footer img {
-    max-width: 50vw;
+    max-width: 50%;
+    position: relative;
+    top: 1rem;
 }

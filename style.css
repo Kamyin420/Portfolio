@@ -99,15 +99,162 @@ header nav .navigatie {
 }
 
 header nav .navigatie p {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     text-transform: lowercase;
     cursor: pointer;
     font-weight: var(--dikke-font);
     margin-right: 1.5rem;
 }
 
+
+/* Navigatie-items – ruimte links voor de hand */
+header nav .navigatie p {
+    position: relative;
+    padding-left: 3.5rem; /* ruimte vrij links */
+    cursor: pointer;
+    display: inline-block;
+
+    /* SCALE ANIMATIE */
+    transition: transform 0.2s ease-out;
+    transform-origin: right center; 
+}
+
+/* Tekst wordt groter bij hover */
+header nav .navigatie p:hover {
+    transform: scale(1.15); /* ≈ +0.5rem effect */
+}
+
+/* Algemene styling voor hover-hand */
+header nav .navigatie p::after {
+    content: "";
+    position: absolute;                        
+    top: 50%;                       
+    transform: translateY(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.15s ease-out;
+}
+
+/* Hover activeert de hand */
+header nav .navigatie p:hover::after {
+    opacity: 1;
+}
+
+/* ----------------------------- */
+/* 🎯 INDIVIDUELE HAND-CONTROLES */
+/* ----------------------------- */
+
+/* ABOUT (blauw) */
+header nav .navigatie .about::after {
+    background-image: url("./images/hand wijs blauw.png");
+    width: 8rem;      
+    height: 8rem;
+    left: -4rem; 
+    margin-top: 3.3rem; 
+}
+
+/* WORK (groen) */
+header nav .navigatie .work::after {
+    background-image: url("./images/hand wijs groen.png");
+    width: 8rem;
+    height: 8rem;
+    left: -3.1rem;
+    margin-top: .6rem; 
+    rotate: -4deg;
+}
+
+/* CONTACT (rood) */
+header nav .navigatie .contact::after {
+    background-image: url("./images/Hand wijs rood.png");
+    width: 8rem;
+    height: 8rem;
+    left: -3.5rem;
+    margin-top: 3.8rem; 
+    rotate: -15deg;
+}
+
+
+
+/* hoverstate met vingers */
+
+/* Navigatie-items – ruimte links voor de hand */
+header nav .navigatie p {
+    position: relative;
+    padding-left: 3.5rem; /* ruimte vrij links */
+    cursor: pointer;
+}
+
+/* Algemene styling voor hover-hand */
+header nav .navigatie p::after {
+    content: "";
+    position: absolute;                        
+    top: 50%;                       
+    transform: translateY(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.15s ease-out;
+}
+
+/* Hover activeert de hand */
+header nav .navigatie p:hover::after {
+    opacity: 1;
+}
+
+/* ----------------------------- */
+/* 🎯 INDIVIDUELE HAND-CONTROLES */
+/* ----------------------------- */
+
+/* ABOUT (blauw) */
+header nav .navigatie .about::after {
+    background-image: url("./images/hand\ wijs\ blauw.png");
+    width: 8rem;      
+    height: 8rem;
+    left: -4rem; 
+    margin-top: 3.3rem; 
+}
+
+/* WORK (groen) */
+header nav .navigatie .work::after {
+    background-image: url("./images/hand\ wijs\ groen.png");
+    width: 8rem;
+    height: 8rem;
+    left: -3.1rem;
+    margin-top: .6rem; 
+    rotate: -4deg;
+}
+
+/* CONTACT (rood) */
+header nav .navigatie .contact::after {
+    background-image: url("./images/Hand\ wijs\ rood.png");
+    width: 8rem;
+    height: 8rem;
+    left: -3.5rem;
+    margin-top: 3.8rem; 
+    rotate: -15deg;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* rode lijn */
+
+
 header nav h1::before { width: 3.5em; }
 header nav h2::before { width: 4.7em; }
+
+
+
+
 
 /* -------------------------------------- */
 /* GEDICHT */

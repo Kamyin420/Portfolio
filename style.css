@@ -87,6 +87,25 @@ header nav h2::before {
     bottom: .2rem;
 }
 
+header nav .navigatie {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: right;
+    margin-top: .5rem;
+}
+
+header nav .navigatie p {
+    font-size: 1.2rem;
+    text-transform: lowercase;
+    cursor: pointer;
+    font-weight: var(--dikke-font);
+    margin-right: 1.5rem;
+}
+
 header nav h1::before { width: 3.5em; }
 header nav h2::before { width: 4.7em; }
 
@@ -123,12 +142,36 @@ header nav h2::before { width: 4.7em; }
 .floater img {
     position: absolute;
     height: auto;
+}
+
+
+/*hoverstate*/
+
+.floater img.overlay {
+    opacity: 0;
+    transition: opacity 0.2s linear;
     pointer-events: none;
 }
 
-.klaus { animation: float-klaus 60s linear infinite; }
-.typo  { animation: float-typo  60s linear infinite; }
-.fungi { animation: float-fungi 60s linear infinite; }
+/* hover op normale image → overlay fade in */
+.floater img.klaus:hover + img.overlay {
+    opacity: 1;
+}
+
+.floater img.typo:hover + img.overlay {
+    opacity: 1;
+}
+
+.floater img.fungi:hover + img.overlay {
+    opacity: 1;
+}
+
+
+
+
+.klaus { animation: float-klaus 40s linear infinite; }
+.typo  { animation: float-typo  40s linear infinite; }
+.fungi { animation: float-fungi 40s linear infinite; }
 
 
 /*animatie*/
@@ -369,3 +412,5 @@ footer img {
     position:static;
     top: .3rem;
 }
+
+

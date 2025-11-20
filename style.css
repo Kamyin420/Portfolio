@@ -20,6 +20,12 @@ body {
     color: var(--fontkleur);
 }
 
+/*
+.link-item {
+    position: relative;
+    display: block;
+}
+
 /* -------------------------------------- */
 /* HEADER */
 /* -------------------------------------- */
@@ -105,12 +111,14 @@ header nav .navigatie {
     margin-top: .5rem;
 }
 
-header nav .navigatie p {
+header nav .navigatie a {
     font-size: 1.6rem;
     text-transform: lowercase;
     font-weight: var(--dikke-font);
     margin-right: 1.5rem;
     cursor: pointer;
+    color: var(--fontkleur);
+    text-decoration: none;
 
     position: relative;
     padding-left: 3.5rem;
@@ -120,12 +128,12 @@ header nav .navigatie p {
     transform-origin: right center;
 }
 
-header nav .navigatie p:hover {
+header nav .navigatie a:hover {
     transform: scale(1.15);
 }
 
 /* Generieke pseudo-element (later per item aangepast) */
-header nav .navigatie p::after {
+header nav .navigatie a::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -136,7 +144,7 @@ header nav .navigatie p::after {
     transition: opacity 0.15s ease-out;
 }
 
-header nav .navigatie p:hover::after {
+header nav .navigatie a:hover::after {
     opacity: 1;
 }
 
@@ -154,7 +162,7 @@ header nav .navigatie .work::after {
     background-image: url("./images/hand wijs groen.png");
     width: 8rem;
     height: 8rem;
-    left: -3.1rem;
+    left: -3.6rem;
     margin-top: .6rem;
     rotate: -4deg;
 }
@@ -274,35 +282,35 @@ header nav .navigatie .contact::after {
 @media screen and (min-width: 786px) {
 
     @media (hover: hover) and (pointer: fine) {
-    header nav .navigatie p:hover {
+    header nav .navigatie a:hover {
         transform: scale(1.15);
     }
 
-    header nav .navigatie p:hover::after {
+    header nav .navigatie a:hover::after {
         opacity: 1;
     }
 }
 
 /* Hover uitschakelen op touch tablets */
 @media (hover: none) and (pointer: coarse) {
-    header nav .navigatie p:hover {
+    header nav .navigatie a:hover {
         transform: none;
     }
 
-    header nav .navigatie p::after {
+    header nav .navigatie a::after {
         opacity: 0 !important;
         display: none !important;
     }
 }
 
-    header nav .navigatie p{
+    header nav .navigatie a{
         font-size: 1.2rem;
     }
  /* ABOUT – blauw */
     header nav .navigatie .about::after {
         width: 6rem;      
         height: 6rem;
-        left: -2rem;      
+        left: -3rem;      
         margin-top: 2.5rem;
     }
 
@@ -310,7 +318,7 @@ header nav .navigatie .contact::after {
     header nav .navigatie .work::after {
         width: 6rem;      
         height: 6rem;
-        left: -1.325rem;  
+        left: -2.6rem;  
         margin-top: .5rem;
         rotate: -4deg;
     }
@@ -498,16 +506,16 @@ header nav .navigatie.active {
 
 /* Prevent hover animations on mobile */
 @media screen and (max-width: 785px) {
-    header nav .navigatie p {
+    header nav .navigatie a {
         transform: none !important;
     }
 
-    header nav .navigatie p:hover {
+    header nav .navigatie a:hover {
         transform: none !important;
     }
 
     /* Verberg hand-hover op mobile */
-    header nav .navigatie p::after {
+    header nav .navigatie a::after {
         display: none !important;
     }
 }

@@ -1,47 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fitzcarraldo</title>
     <link rel="stylesheet" href="./fitzcarraldo.css">
-     <link rel="icon" type="image/x-icon" href="./images/icon.png">
+    <link rel="icon" type="image/x-icon" href="./images/icon.png">
 </head>
+
 <body>
-     <header class="naam">
+    <header class="naam">
         <nav>
-            <h1>noah</h1>
-            <h2>boontjes</h2>
+
+            <h1><a href="index.html">noah</a></h1>
+            <h2><a href="index.html">boontjes</a></h2>
 
             <button class="hamburger" aria-label="menu">
-            <span></span>
-            <span></span>
-            <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
 
 
-         <div class="navigatie">
-            <a href="about.html" class="about">about</a>
-            <a href="work.html" class="work">work</a>
-            <a href="contact.html" class="contact">contact</a>
-    </div>
+            <div class="navigatie">
+                <a href="about.html" class="about">about</a>
+                <a href="work.html" class="work">work</a>
+                <a href="contact.html" class="contact">contact</a>
+            </div>
         </nav>
         <h3>fitzcarraldo</h3>
 
-       
 
-</header>
 
-<section class="inleiding">
- <video src="./images/Klausie.mp4"  autoplay muted loop playsinline></video>
- <p>Explore an interactive museum through a website complete with sound, interaction and film, as if you are truly there.</p>
- <p> This exhibition delves into the iconic Fitzcarraldo, a film that masterfully blends obsession,
-  madness, and dreams. Discover Herzog’s visionary storytelling and his unparalleled drive to push the boundaries of cinema.
-</p>
-</section>
+    </header>
 
-        
-<script src="script.js"></script>
-    
+    <section>
+        <div class="inleiding">
+            <div class="videocontainer"><video class="klausievid" autoplay muted playsinline loop
+                    src="./images/Klausie_mobile.mp4"></video>
+                <video class="video-desktop" autoplay muted loop playsinline src="./images/Klausie.mp4"></video>
+            </div>
+            <div class="tekstcontainer">
+                <img class="museumtitel" src="./images/museumtitel.png" alt="An interactive museum ex">
+                <p class="tekst1">Explore an interactive museum through a website complete with sound, interaction and
+                    film,
+                    as if you are truly there.</p>
+                <p class="tekst2"> This exhibition delves into the iconic Fitzcarraldo, a film that masterfully blends
+                    obsession,
+                    madness, and dreams. Discover Herzog’s visionary storytelling and his unparalleled drive to push the
+                    boundaries of cinema.
+
+                </p>
+            </div>
+        </div>
+        <p class="tekst3">Figma / Prototyping / Interface design</p>
+
+
+
+    </section>
+         <video class="obsessie-mobile" autoplay muted playsinline loop src="./images/obsessie-mobile.mp4"> </video>
+         <video class="obsessie" autoplay muted playsinline loop src="./images/obsessie.mp4"> </video>
+    <footer>
+        <img src="./images/hahaha.png"
+            alt="a lot of people laughing at how fun the website is and the text, Noah Boontjes, miloboontjes@gmail.com">
+    </footer>
+
+   
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>

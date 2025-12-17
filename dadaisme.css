@@ -18,12 +18,16 @@ body {
     font-family: var(--inter-font);
     background-color: var(--bgcolor);
     color: var(--fontkleur);
+    margin-left: .7rem;
+    margin-right: .7rem;
 }
+
 
 a   {
     color: inherit;
     text-decoration: none;
 }
+
 
 /* -------------------------------------- */
 /* HEADER */
@@ -36,20 +40,23 @@ header {
 }
 
 header h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: var(--dikke-font);
     text-transform: capitalize;
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 2;
     position: relative;
     height: fit-content;
+    place-self: center end;
+    top: .2rem;
+    
 }
 
 header h3::before {
     content: "";
     background-color: var(--groen);
     position: absolute;
-    height: 1.7rem;
+    height: 1.2rem;
     width: 12rem;
     bottom: .4rem;
     z-index: -1;
@@ -176,152 +183,71 @@ header nav .navigatie .contact::after {
     rotate: -15deg;
 }
 
-/* -------------------------------------- */
-/* GEDICHT */
-/* -------------------------------------- */
 
-.gedicht {
-    font-size: .5rem;
-    margin-left: 1rem;
-    margin-top: -3rem;
-    max-height: 8rem;
+
+
+/*Sectie voor content*/
+
+
+.inleiding {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2rem;
 }
 
-.gedicht img {
-    width: 12rem;
-    position: relative;
-    top: -11rem;
-    z-index: -1;
+.videocontainer {
+    width: 55%;
 }
 
-/* -------------------------------------- */
-/* FLOATING COLLAGE */
-/* -------------------------------------- */
-
-.floater {
-    position: relative;
+.videocontainer img{
     width: 100%;
-    height: 52rem;
-    margin-top: 6rem;
+    float: right;
+    padding-left: 1.5rem;
+
 }
 
-.floater img,
-.floater video {
-    position: absolute;
-    height: auto;
-}
+.tekstcontainer {
+    display: flex;
+    flex-direction: column;
 
-
-
-/* overlays */
-.floater .overlay {
-    opacity: 0;
-    transition: opacity 0.2s linear;
-    pointer-events: none;
-}
-
-.floater img.klaus:hover + img.overlay,
-.floater img.typo:hover + img.overlay,
-.floater img.fungi:hover + img.overlay,
-.floater img.hand:hover + img.overlay  {
-    opacity: 1;
-}
-
-/* ANIMATIES */
-.klaus { animation: float-klaus 40s linear infinite; }
-.typo  { animation: float-typo  40s linear infinite; }
-.fungi { animation: float-fungi 40s linear infinite; }
-.hand { animation: float-hand 40s linear infinite; }
-
-@keyframes float-klaus {
-    0%   { transform: translate(0rem, 0rem); }
-    12%  { transform: translate(-1.02rem, -0.51rem); }
-    25%  { transform: translate(-2.04rem, -1.53rem); }
-    37%  { transform: translate(-2.55rem, -0.51rem); }
-    50%  { transform: translate(-1.87rem, 0.85rem); }
-    62%  { transform: translate(-1.19rem, 1.19rem); }
-    75%  { transform: translate(-0.68rem, 0.68rem); }
-    87%  { transform: translate(-0.26rem, -0.17rem); }
-    100% { transform: translate(0rem, 0rem); }
-}
-
-@keyframes float-typo {
-    0%   { transform: translate(0rem, 0rem); }
-    18%  { transform: translate(-0.34rem, 1.19rem); }
-    32%  { transform: translate(-0.85rem, 2.89rem); }
-    48%  { transform: translate(-2.21rem, 1.02rem); }
-    62%  { transform: translate(-0.85rem, -0.85rem); }
-    78%  { transform: translate(-0.51rem, -2.38rem); }
-    90%  { transform: translate(-0.34rem, -1.53rem); }
-    100% { transform: translate(0rem, 0rem); }
-}
-
-@keyframes float-fungi {
-    0%   { transform: translate(0rem, 0rem); }
-    15%  { transform: translate(0.68rem, -1.7rem); }
-    30%  { transform: translate(1.53rem, -3.4rem); }
-    45%  { transform: translate(3.91rem, -1.7rem); }
-    60%  { transform: translate(-1.87rem, 1.7rem); }
-    75%  { transform: translate(-1.02rem, 0.85rem); }
-    90%  { transform: translate(-0.34rem, 0.17rem); }
-    100% { transform: translate(0rem, 0rem); }
-}
-
-@keyframes float-hand {
-    0%   { transform: translate(0rem, 0rem); }
-    15%  { transform: translate(-0.34rem, 1.7rem); }
-    30%  { transform: translate(-1.53rem, -3.4rem); }
-    45%  { transform: translate(-2.9rem, 0rem); }
-    60%  { transform: translate(-0.17rem, 1.96rem); }
-    75%  { transform: translate(1.02rem, 0.34rem); }
-    90%  { transform: translate(-0.34rem, 0.17rem); }
-    100% { transform: translate(0rem, 0rem); }
+    width: 45%;
+    font-size: .8rem;
+    padding-left: 1rem;
+    gap: 1rem;
+    
 }
 
 
-/* POSITIES MOBILE */
-.klaus { width: 14rem; top: -3rem; right: 1.5rem; }
-.typo  { width: 18rem; top: 10rem; left: 1rem; }
-.fungi { width: 12rem; top: 24rem; right: 2rem; }
-.hand  { width: 14rem; top: 30rem; left: 2rem;}
-
-.page{
-    overflow: hidden;
-}
-
-.gegevenscontent{
-    margin: 1rem;
-    padding: .3rem;
-    width: 60%;
-    z-index: 1;
-    font-size: 1rem;
+.tekst1 {
     font-weight: 600;
-
+    padding-top: 1rem;
 }
 
-.ai {
-    position: relative;;
-    width: 100rem;
-    top: -15rem;
-    right: 4rem;
-    animation: spin 60s linear infinite;
+.tekst2 {
+    font-weight: 400;
 }
 
-.animation {
-    height: 75rem;
+.tekst3 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 1rem;
 }
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
+.tekstcontainer img{
+    width: 12rem;
+    margin-left: 1rem;
+    
+}
+
+
+.pdf  img{
+    max-width: 100%;
+    margin-top: 5rem;
+    margin-left: 0;
+    margin-right: 0;
+    
     }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-
-
 
 /* -------------------------------------- */
 /* TABLET */
@@ -384,11 +310,13 @@ header nav .navigatie .contact::after {
 
     header h3 {
         font-size: 3.75rem;
+        place-self: center end;
+        top: 1rem;
     }
 
     header h3::before {
         height: 2.55rem;
-        width: 18rem;
+        width: 24rem;
         bottom: 0.6rem;
     }
 
@@ -403,54 +331,67 @@ header nav .navigatie .contact::after {
         bottom: 0.3rem;
     }
 
-    .gedicht {
-        font-size: .63rem;
-        margin-left: 2.5rem;
-        margin-top: -4.5rem;
-    }
-
-    .gedicht img {
-        width: 16rem;
-        top: -14rem;
-    }
-
-    .floater {
-        width: 100%;
-        height: 50rem;
-    }
-
-    .klaus { width: 30%; left: 55%; top: -15%; }
-    .typo  { width: 50%; left: 10%; top: 10%; }
-    .fungi { width: 32%; left: 55%; top: 50%; }
-    .hand  { width: 30%; left: 10%; top: 67%;}
-
-.gegevenscontent{
+    .inleiding {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     padding-top: 4rem;
-    padding-left: 3rem;
-    width: 60%;
-    z-index: 1;
-    font-size: 1.2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.videocontainer {
+    width: 65%;
+    float: right;
+}
+
+.videocontainer img {
+    padding-left: 4rem;
+    width: 100%;
+}
+
+.tekstcontainer {
+    display: flex;
+    flex-direction: column;
+
+    width: 35%;
+    font-size: 1rem;
+    gap: 2rem;
+    
+}
+
+.tekst1 {
     font-weight: 600;
-    
-    
+}
+
+.tekst2 {
+    font-weight: 400;
+}
+
+.tekst3 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    margin-right: 3rem;
 
 }
 
 
 
-.ai {
-    position: relative;;
-    width: 100rem;
-    top: -20rem;
-    left: 15rem;
-    animation: spin 60s linear infinite;
+.pdf  img{
+    margin-top: 9rem;
 }
 
-.animation {
-    height: 80rem;
-}
+
+
 
 }
+
+    /*Sectie voor tablet content*/
+
+
+
+
 
 
 
@@ -462,25 +403,20 @@ header nav .navigatie .contact::after {
 
 @media screen and (min-width: 1024px) {
 
-    .floater {
-        height: 100rem;
-        width: 100%;
-        margin: 0 auto;
-        position: relative;
-    }
 
-    .klaus { width: 30%; left: 50%; top: 2%; }
-    .typo  { width: 45%; left: 10%; top: 28%; }
-    .fungi { width: 28%; left: 60%; top: 42%; }
-    .hand  { width: 26%; left: 12%; top: 66%;}
+    .klaus { width: 30%; left: 35%; top: 2%; }
+    .typo  { width: 45%; left: 50%; top: 28%; }
+    .fungi { width: 28%; left: 8%; top: 42%; }
 
     header h3 {
         font-size: 5rem;
+        place-self: center end;
+        top: 2rem;
     }
 
     header h3::before {
         height: 3.4rem;
-        width: 24rem;
+        width: 30rem;
         bottom: 0.8rem;
     }
 
@@ -495,44 +431,60 @@ header nav .navigatie .contact::after {
         bottom: 0.4rem;
     }
 
-    .gedicht {
-        font-size: .75rem;
-        margin-left: 5rem;
-        margin-top: -6rem;
-    }
+/*sectie voor desktop content*/
 
-    .gedicht img {
-        width: 22rem;
-        top: -17rem;
-    }
+.inleiding {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    
+}
 
+.videocontainer {
+    width: 50%;
+    
+}
 
-    .gegevenscontent{
-    padding-top: 6rem;
-    padding-left: 10rem;
-    width: 60%;
-    z-index: 1;
-    font-size: 1.8rem;
+.videocontainer video {
+    width: 100%;
+    float: right;
+}
+
+.tekstcontainer {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+    font-size: 1.3rem;
+    padding-left: 4rem;
+    gap: 2rem;
+    
+}
+
+.tekst1 {
     font-weight: 600;
-    
-    
+    padding-top: 2rem;
+}
+
+.tekst2 {
+    font-weight: 400;
+   
+}
+
+.tekst3 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 1rem;
 
 }
 
-
-
-.ai {
-    position: relative;;
-    width: 160rem;
-    top: -20rem;
-    left: 10rem;
-    animation: spin 60s linear infinite;
+.pdf  img{
+    margin-top: 12rem;
+    margin-left: 0;
+    margin-right: 0;
 }
-
-.animation {
-    height: 120rem;
-}
-
 
 }
 

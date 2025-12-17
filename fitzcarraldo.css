@@ -260,6 +260,37 @@ header nav .navigatie .contact::after {
     transform: translate(-50%);
 }
 
+.fitzcontent {
+    margin: 2rem;
+}
+
+.fitzcontent video{
+   width: 100%;
+}
+
+
+.figma-box h3{
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    margin-left: 1rem;
+}
+
+iframe {
+    border: none;
+}
+
+.figma-box {
+  width: 100vw;  
+  height: 55vw;
+  margin-top: 3rem;
+
+}
+
+.figma-box iframe {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
 
 /* -------------------------------------- */
 /* TABLET */
@@ -397,14 +428,42 @@ header nav .navigatie .contact::after {
     display: block;
     width: 90%;
     object-fit: cover;
-    margin-top: 3rem;
+    margin-top: 5rem;
     margin-left: 50vw;
     transform: translate(-50%);
+    
 }
+
 
 .obsessie-mobile {
     display: none;
 }
+
+.fitzcontent {
+    margin: 5rem;
+}
+
+.fitzcontent video {
+    width: 100%;
+}
+
+.figma-box h3 {
+    font-size: 3rem;
+    padding-left: 5rem;
+    margin-top: 10rem;
+}
+
+.figma-box{
+    margin-top: 8rem;
+    
+}
+
+.figma-box iframe {
+    padding: 2rem;
+    
+}
+
+
 
 }
 
@@ -516,6 +575,26 @@ header nav .navigatie .contact::after {
         object-fit: cover;
     }
 
+.fitzcontent {
+    margin: 6rem;
+}
+
+.fitzcontent video{
+   width: 100%;
+}
+
+.figma-box h3 {
+    font-size: 3rem;
+    padding-left: 5rem;
+    margin-top: 10rem;
+}
+.figma-box iframe {
+    padding: 4rem;
+}
+
+.figma-box{
+    margin-top: 8rem;
+}
 
 
 }
@@ -525,23 +604,15 @@ header nav .navigatie .contact::after {
 /* -------------------------------------- */
 
 footer {
-    height: 9rem;
     margin-top: 6rem;
+    margin-bottom: 0;
 }
 
 footer img {
+    position: relative;
     max-width: 50%;
-    position: static;
-}
-
-footer {
-    height: 9rem;
-}
-
-footer img {
-    max-width: 50%;
-    position: static;
-    top: .3rem;
+    margin: 0;
+    margin-bottom: 0;
 }
 
 

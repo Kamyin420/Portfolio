@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*, body, body::after, body::before {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dikke-font: 700;
+    --inter-font: "Inter", sans-serif;
+    --bgcolor: #E6E7E9;
+    --fontkleur: #1E1E1E;
+    --rood: #E94544;
+    --groen: #3FFD55;
+}
+
+body {
+    font-family: var(--inter-font);
+    background-color: var(--bgcolor);
+    color: var(--fontkleur);
+    margin-left: .7rem;
+    margin-right: .7rem;
+}
+
+
+a   {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* -------------------------------------- */
+/* HEADER */
+/* -------------------------------------- */
+
+header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+header h3 {
+    font-size: 2rem;
+    font-weight: var(--dikke-font);
+    text-transform: capitalize;
+    grid-column: 1;
+    grid-row: 2;
+    position: relative;
+    height: fit-content;
+    place-self: center end;
+    top: .2rem;
+    
+}
+
+header h3::before {
+    content: "";
+    background-color: var(--groen);
+    position: absolute;
+    height: 1.2rem;
+    width: 12rem;
+    bottom: .4rem;
+    z-index: -1;
+}
+
+header nav {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+header nav h1,
+header nav h2 {
+    font-weight: var(--dikke-font);
+    text-transform: capitalize;
+    position: relative;
+    height: fit-content;
+    line-height: 1.2;
+}
+
+header nav h1 {
+    font-size: 1rem;
+    grid-column: 2;
+}
+
+header nav h2 {
+    font-size: 1rem;
+    grid-column: 2;
+    grid-row: 2;
+    margin-left: 30px;
+}
+
+header nav h1::before,
+header nav h2::before {
+    content: "";
+    background-color: var(--rood);
+    position: absolute;
+    z-index: -1;
+    height: 0.5rem;
+    bottom: .2rem;
+}
+
+header nav h1::before { width: 3.5em; }
+header nav h2::before { width: 4.7em; }
+
+/* -------------------------------------- */
+/* NAVIGATIE HOVER + HANDEN */
+/* -------------------------------------- */
+
+header nav .navigatie {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    text-align: right;
+    margin-top: .5rem;
+}
+
+header nav .navigatie a {
+    font-size: 1.6rem;
+    text-transform: lowercase;
+    font-weight: var(--dikke-font);
+    margin-right: 1.5rem;
+    cursor: pointer;
+    color: var(--fontkleur);
+    text-decoration: none;
+
+    position: relative;
+    padding-left: 3.5rem;
+
+    display: inline-block;
+    transition: transform 0.2s ease-out;
+    transform-origin: right center;
+}
+
+header nav .navigatie a:hover {
+    transform: scale(1.15);
+}
+
+/* Generieke pseudo-element (later per item aangepast) */
+header nav .navigatie a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 0.15s ease-out;
+}
+
+header nav .navigatie a:hover::after {
+    opacity: 1;
+}
+
+/* ABOUT – blauw */
+header nav .navigatie .about::after {
+    background-image: url("./images/hand wijs blauw.png");
+    width: 8rem;
+    height: 8rem;
+    left: -4rem;
+    margin-top: 3.3rem;
+}
+
+/* WORK – groen */
+header nav .navigatie .work::after {
+    background-image: url("./images/hand wijs groen.png");
+    width: 8rem;
+    height: 8rem;
+    left: -3.6rem;
+    margin-top: .6rem;
+    rotate: -4deg;
+}
+
+/* CONTACT – rood */
+header nav .navigatie .contact::after {
+    background-image: url("./images/Hand wijs rood.png");
+    width: 8rem;
+    height: 8rem;
+    left: -3.5rem;
+    margin-top: 3.8rem;
+    rotate: -15deg;
+}
+
+
+
+
+/*Sectie voor content*/
+
+
+.inleiding {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.videocontainer {
+    width: 55%;
+}
+
+.videocontainer img{
+    width: 100%;
+    float: right;
+    padding-left: 1.5rem;
+
+}
+
+.tekstcontainer {
+    display: flex;
+    flex-direction: column;
+
+    width: 45%;
+    font-size: .8rem;
+    padding-left: 1rem;
+    gap: 1rem;
+    
+}
+
+
+.tekst1 {
+    font-weight: 600;
+    padding-top: 1rem;
+}
+
+.tekst2 {
+    font-weight: 400;
+}
+
+.tekst3 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+.tekstcontainer img{
+    width: 12rem;
+    margin-left: 1rem;
+    
+}
+
+
+.pdf  img{
+    max-width: 100%;
+    margin-top: 5rem;
+    margin-left: 0;
+    margin-right: 0;
+    
+    }
+
+/* -------------------------------------- */
+/* TABLET */
+/* -------------------------------------- */
+
+@media screen and (min-width: 786px) {
+
+    @media (hover: hover) and (pointer: fine) {
+    header nav .navigatie a:hover {
+        transform: scale(1.15);
+    }
+
+    header nav .navigatie a:hover::after {
+        opacity: 1;
+    }
+}
+
+/* Hover uitschakelen op touch tablets */
+@media (hover: none) and (pointer: coarse) {
+    header nav .navigatie a:hover {
+        transform: none;
+    }
+
+    header nav .navigatie a::after {
+        opacity: 0 !important;
+        display: none !important;
+    }
+}
+
+    header nav .navigatie a{
+        font-size: 1.2rem;
+    }
+ /* ABOUT – blauw */
+    header nav .navigatie .about::after {
+        width: 6rem;      
+        height: 6rem;
+        left: -3rem;      
+        margin-top: 2.5rem;
+    }
+
+    /* WORK – groen */
+    header nav .navigatie .work::after {
+        width: 6rem;      
+        height: 6rem;
+        left: -2.6rem;  
+        margin-top: .5rem;
+        rotate: -4deg;
+    }
+
+    /* CONTACT – rood */
+    header nav .navigatie .contact::after {
+        width: 6rem;      
+        height: 6rem;
+        left: -1.625rem;  
+        margin-top: 2.8rem;
+        rotate: -15deg;
+    }
+
+
+
+    header h3 {
+        font-size: 3.75rem;
+        place-self: center end;
+        top: 1rem;
+    }
+
+    header h3::before {
+        height: 2.55rem;
+        width: 24rem;
+        bottom: 0.6rem;
+    }
+
+    header nav h1,
+    header nav h2 {
+        font-size: 1.5rem;
+    }
+
+    header nav h1::before,
+    header nav h2::before {
+        height: 0.75rem;
+        bottom: 0.3rem;
+    }
+
+    .inleiding {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.videocontainer {
+    width: 65%;
+    float: right;
+}
+
+.videocontainer img {
+    padding-left: 4rem;
+    width: 100%;
+}
+
+.tekstcontainer {
+    display: flex;
+    flex-direction: column;
+
+    width: 35%;
+    font-size: 1rem;
+    gap: 2rem;
+    
+}
+
+.tekst1 {
+    font-weight: 600;
+}
+
+.tekst2 {
+    font-weight: 400;
+}
+
+.tekst3 {
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    margin-right: 3rem;
+
+}
+
+
+
+.pdf  img{
+    margin-top: 9rem;
+}
+
+
+
+
+}
+
+    /*Sectie voor tablet content*/
+
+
+
+
+
+
+
+
+
+/* -------------------------------------- */
+/* DESKTOP */
+/* -------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+
+
+    .klaus { width: 30%; left: 35%; top: 2%; }
+    .typo  { width: 45%; left: 50%; top: 28%; }
+    .fungi { width: 28%; left: 8%; top: 42%; }
+
+    header h3 {
+        font-size: 5rem;
+        place-self: center end;
+        top: 2rem;
+    }
+
+    header h3::before {
+        height: 3.4rem;
+        width: 30rem;
+        bottom: 0.8rem;
+    }
+
+    header nav h1,
+    header nav h2 {
+        font-size: 2rem;
+    }
+
+    header nav h1::before,
+    header nav h2::before {
+        height: 1rem;
+        bottom: 0.4rem;
+    }
+
+/*sectie voor desktop content*/
+
+.inleiding {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    
+}
+
+.videocontainer {
+    width: 50%;
+    
+}
+
+.videocontainer video {
+    width: 100%;
+    float: right;
+}
+
+.tekstcontainer {
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+    font-size: 1.3rem;
+    padding-left: 4rem;
+    gap: 2rem;
+    
+}
+
+.tekst1 {
+    font-weight: 600;
+    padding-top: 2rem;
+}
+
+.tekst2 {
+    font-weight: 400;
+   
+}
+
+.tekst3 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 1rem;
+
+}
+
+.pdf  img{
+    margin-top: 12rem;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+}
+
+/* -------------------------------------- */
+/* FOOTER */
+/* -------------------------------------- */
+
+footer {
+    margin-top: 6rem;
+    margin-bottom: 0;
+}
+
+footer img {
+    position: relative;
+    max-width: 50%;
+    margin: 0;
+    margin-bottom: 0;
+}
+
+
+.hamburger {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    border:#1E1E1E;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--fontkleur);
+    margin-bottom: 4px;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+}
+
+/* Hamburger → kruis */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* MOBILE NAV HIDDEN DEFAULT */
+header nav .navigatie {
+    position: absolute;
+    top: 1rem;
+    right: -1.2rem;
+    width: 50vw;
+    background: transparent;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .3rem;
+    align-items: flex-end;
+    transform: translateX(100%);
+    transition: transform 0.25s ease-out;
+    z-index: 3;
+    display: none;
+}
+
+/* Active mobile menu */
+header nav .navigatie.active {
+    transform: translateX(0);
+    display: block;
+}
+
+/* Prevent hover animations on mobile */
+@media screen and (max-width: 785px) {
+    header nav .navigatie a {
+        transform: none !important;
+    }
+
+    header nav .navigatie a:hover {
+        transform: none !important;
+    }
+
+    /* Verberg hand-hover op mobile */
+    header nav .navigatie a::after {
+        display: none !important;
+    }
+}
+
+/* TABLET & DESKTOP — geen hamburger menu */
+@media screen and (min-width: 786px) {
+    .hamburger {
+        display: none;
+    }
+
+    header nav .navigatie {
+        position: absolute;
+        transform: none !important;
+        background: none;
+        padding: 0;
+        top: 0;
+        right: 1rem;
+        flex-direction: column;
+        display: flex;
+    }
+}
+
+header h3.hide {
+    opacity: 0;
+    transition: opacity 0.25s ease-out;
+}

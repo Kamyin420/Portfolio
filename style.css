@@ -198,6 +198,13 @@ header nav .navigatie .contact::after {
 /* FLOATING COLLAGE */
 /* -------------------------------------- */
 
+@media screen and (min-width: 786px) {
+    .floater .overlay {
+        display: none;}
+}
+
+
+
 .floater {
     position: relative;
     width: 100%;
